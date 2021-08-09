@@ -1,0 +1,6 @@
+.vscode/
+platforms/
+plugins/
+typings/
+www/resources/
+debug.log

@@ -1,0 +1,50 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="zprovavittorio.controller.page1">
+	<Page title="{i18n>titlePage1}" id="__page1">
+		<content>
+			<sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" layout="ResponsiveGridLayout" id="__form0">
+				<sap.ui.layout.form:content>
+					<Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="{i18n>labelStazionePartenza}" width="100%" id="__label2"/>
+					<Input width="100%" id="inputStazionePartenza" showSuggestion="true" showTableSuggestionValueHelp="false" showValueStateMessage="false" suggestionRows="{stazioni>/stazioni}" placeholder="{i18n>placeholderInputNomeStazione}" suggestionItemSelected="onSuggestionItemSelectedPartenza">
+						<suggestionColumns>
+							<Column hAlign="Begin" popinDisplay="Inline" demandPopin="true">
+								<Label text="Stazione"/>
+							</Column>
+						</suggestionColumns>
+						<suggestionRows>
+							<ColumnListItem>
+								<cells>
+									<Label text="{stazioni>nome_staz}"/>
+								</cells>
+							</ColumnListItem>
+						</suggestionRows>
+					</Input>
+					<Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="{i18n>labelStazioneDestinazione}" width="100%" id="__label2_copy"/>
+					<Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" width="100%" id="inputStazioneArrivo" showSuggestion="true" showTableSuggestionValueHelp="false" showValueStateMessage="false" suggestionRows="{stazioni>/stazioni}" placeholder="{i18n>placeholderInputNomeStazione}" suggestionItemSelected="onSuggestionItemSelectedArrivo">
+						<suggestionColumns>
+							<Column hAlign="Begin" popinDisplay="Inline" demandPopin="true" id="__column1">
+								<Label text="Stazione"/>
+							</Column>
+						</suggestionColumns>
+						<suggestionRows>
+							<ColumnListItem>
+								<cells>
+									<Label text="{stazioni>nome_staz}"/>
+								</cells>
+							</ColumnListItem>
+						</suggestionRows>
+					</Input>
+					<Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" width="100%" id="__label5" text="{i18n>labelDataPartenza}"/>
+					<DatePicker width="100%" id="pickerDataPartenza" displayFormat="dd/MM/yy" placeholder="gg/mm/aa"/>
+					<Label text="{i18n>labelOraPartenza}" width="100%" id="__label4"/>
+					<TimePicker xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" placeholder="hh:mm" placeholderSymbol="-" mask="h9:59:59" displayFormat="HH:mm" localeId="it-IT" id="pickerOraPartenza"/>
+					<Label width="100%" id="__label6"/>
+					<Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" text="{i18n>textButtonCerca}" width="100px" id="__button2" activeIcon="sap-icon://search" icon="sap-icon://search" press="onPressButtonCerca"/>
+				</sap.ui.layout.form:content>
+				<sap.ui.layout.form:customData>
+					<core:CustomData key="w5g.dt.editable" value="false" id="__data3"/>
+				</sap.ui.layout.form:customData>
+			</sap.ui.layout.form:SimpleForm>
+			
+		</content>
+	</Page>
+</mvc:View>
